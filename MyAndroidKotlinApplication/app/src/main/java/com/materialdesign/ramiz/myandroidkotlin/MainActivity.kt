@@ -35,4 +35,7 @@ class MainActivity: AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    fun sumXY(x: Int, y: Int): Int = x + y
+
 }
