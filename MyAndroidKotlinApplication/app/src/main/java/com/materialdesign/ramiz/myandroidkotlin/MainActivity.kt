@@ -22,13 +22,9 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        var a = 1
-        var s1 = "a is $a"
-
-        a = 2
-        var s2 = "${s1.replace("is", "was")}, but now is $a"
-
-        textView.text = s2
+        val str: String? = "This string can be null"
+        val str2 = str?.replace("can", "could")
+        textView.text = str2
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
