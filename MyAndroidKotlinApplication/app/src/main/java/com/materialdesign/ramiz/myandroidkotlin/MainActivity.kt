@@ -24,7 +24,7 @@ class MainActivity: AppCompatActivity() {
 
         val x = 1
         val y = 5
-        textView.text = "x + y = ${sumXY(x, y)}"
+        textView.text = "max(x, y) = ${maxOf(x, y)}"
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -44,4 +44,6 @@ class MainActivity: AppCompatActivity() {
     }
 
     fun sumXY(x: Int, y: Int): Int = x + y
+
+    fun maxOf(x: Int, y: Int) = if (x > y) x else y
 }
