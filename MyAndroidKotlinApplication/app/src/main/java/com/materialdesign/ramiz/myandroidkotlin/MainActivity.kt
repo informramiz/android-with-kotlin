@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity: AppCompatActivity() {
 
@@ -18,6 +19,9 @@ class MainActivity: AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
+
+        val x: Int = 0
+        textView.text = "Value of x is $x"
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
