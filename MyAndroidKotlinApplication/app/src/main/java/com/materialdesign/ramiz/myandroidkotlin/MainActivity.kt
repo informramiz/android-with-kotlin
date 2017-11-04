@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity: AppCompatActivity() {
 
+    var x = 1 //inferred type will be Int
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,8 +22,8 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        val x: Int = 1
-        val y: Int = 5
+        val x = 1
+        val y = 5
         textView.text = "x + y = ${sumXY(x, y)}"
     }
 
@@ -42,5 +44,4 @@ class MainActivity: AppCompatActivity() {
     }
 
     fun sumXY(x: Int, y: Int): Int = x + y
-
 }
