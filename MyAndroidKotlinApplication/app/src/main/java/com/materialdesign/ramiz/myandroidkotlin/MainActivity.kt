@@ -20,8 +20,9 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        val x: Int = 0
-        textView.text = "Value of x is $x"
+        val x: Int = 1
+        val y: Int = 5
+        textView.text = "x + y = ${sumXY(x, y)}"
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
