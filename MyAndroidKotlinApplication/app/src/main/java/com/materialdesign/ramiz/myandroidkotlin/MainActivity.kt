@@ -22,9 +22,13 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        val x = 1
-        val y = 5
-        textView.text = "max(x, y) = ${maxOf(x, y)}"
+        var a = 1
+        var s1 = "a is $a"
+
+        a = 2
+        var s2 = "${s1.replace("is", "was")}, but now is $a"
+
+        textView.text = s2
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
