@@ -28,7 +28,8 @@ class MainActivity: AppCompatActivity() {
 //        tryWhen()
 //        tryRanges()
         tryLambdaExpressions()
-        tryPojo()
+//        tryPojo()
+        tryExtensions()
     }
 
     private fun tryLambdaExpressions() {
@@ -154,5 +155,16 @@ class MainActivity: AppCompatActivity() {
 
         val user2 = User ("Ramiz Raja", "informramiz@gmail.com")
         addTextViewWithText("user1 == user2 ? ${user1 == user2}")
+    }
+
+    //try extensions
+    fun String.myUpperCase(): String {
+        return this.toUpperCase();
+    }
+
+    private fun tryExtensions() {
+        val str = "This is my string".myUpperCase()
+        addTextViewWithText("Testing extensions...", gravity = Gravity.START)
+        addTextViewWithText("My custom uppper case extensions: $str")
     }
 }
