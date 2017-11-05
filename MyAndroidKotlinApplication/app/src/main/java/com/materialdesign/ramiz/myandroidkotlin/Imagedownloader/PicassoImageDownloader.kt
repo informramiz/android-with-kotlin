@@ -15,6 +15,7 @@ open class PicassoImageDownloader : ImageDownloader {
                 .with(context)
                 .load(url)
                 .error(android.R.drawable.ic_delete)
+                .resize(1200, 800)
                 .into(imageView)
     }
 
