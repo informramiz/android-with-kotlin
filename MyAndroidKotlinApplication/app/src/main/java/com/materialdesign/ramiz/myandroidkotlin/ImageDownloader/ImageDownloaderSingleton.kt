@@ -10,9 +10,9 @@ import com.squareup.picasso.Picasso
  */
 
 object ImageDownloaderSingleton {
-    //this should probably be injected with Dagger2 but may
+    //this should be injected with Dagger2 but may
     //be for a later day
-    
+
     //Do you see the benefit of ImageDownloader interface???
     //We can just plugin a different image downloader and other
     //code in app will not need a single line of code change. Cool na?

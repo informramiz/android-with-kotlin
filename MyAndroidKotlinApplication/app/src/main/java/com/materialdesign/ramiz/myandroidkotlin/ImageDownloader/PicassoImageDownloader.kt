@@ -7,6 +7,8 @@ import com.squareup.picasso.Picasso
 
 /**
  * Created by ramiz on 11/6/17.
+ * This specific ImageDownloader implementation uses
+ * picasso to library
  */
 open class PicassoImageDownloader : ImageDownloader {
     override fun loadImage(context: Context, url: String, imageView: ImageView) {
