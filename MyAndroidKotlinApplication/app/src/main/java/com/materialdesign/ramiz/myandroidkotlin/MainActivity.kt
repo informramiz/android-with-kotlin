@@ -22,9 +22,10 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        val str: String? = "This string can be null"
-        val str2 = str?.replace("can", "could")
-        textView.text = str2
+        val y = returnInt()
+        val z = 5
+        val ans = y?.times(z)
+        textView.text = "Answer with null safety check is : $ans"
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -46,4 +47,8 @@ class MainActivity: AppCompatActivity() {
     fun sumXY(x: Int, y: Int): Int = x + y
 
     fun maxOf(x: Int, y: Int) = if (x > y) x else y
+
+    fun returnInt(): Int? {
+        return 1
+    }
 }
