@@ -39,32 +39,29 @@ class MainActivity: AppCompatActivity() {
 
 
         //iterating over ranges, cool?
-        val newTextView = TextView(this)
-        rootLayout.addView(newTextView)
-        newTextView.text = "Forward range(1-5)"
+        addTextViewWithText("Forward range(1-5)", Gravity.START)
 
         for (i in 1..5) {
-            //let's call some old java style code
-            //and add a custom view at run time
-            val newTextView = TextView(this)
-            newTextView.gravity = Gravity.CENTER
-            rootLayout.addView(newTextView)
-            newTextView.text = "$i"
+            addTextViewWithText(i)
         }
 
         //iterate backward
         //iterating over ranges, cool?
-        val newTextView1 = TextView(this)
-        rootLayout.addView(newTextView1)
-        newTextView1.text = "Backward range(10-0) with step 2"
+        addTextViewWithText("Backward range(10-0) with step 2", Gravity.START)
 
         for (i in 10 downTo 0 step 2) {
             //iterating over ranges, cool?
-            val newTextView = TextView(this)
-            newTextView.gravity = Gravity.CENTER
-            rootLayout.addView(newTextView)
-            newTextView.text = "$i"
+            addTextViewWithText("$i")
         }
+    }
+
+    private fun addTextViewWithText(value: Any, gravity: Int = Gravity.CENTER) {
+        //let's call some old java style code
+        //and add a custom view at run time
+        val newTextView = TextView(this)
+        newTextView.gravity = gravity
+        rootLayout.addView(newTextView)
+        newTextView.text = "$value"
     }
 
     private fun tryWhen() {
