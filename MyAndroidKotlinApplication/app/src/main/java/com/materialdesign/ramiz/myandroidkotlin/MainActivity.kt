@@ -36,6 +36,35 @@ class MainActivity: AppCompatActivity() {
         if (x in 1..y) {
             textView.text = "$x fits in range 0-$y"
         }
+
+
+        //iterating over ranges, cool?
+        val newTextView = TextView(this)
+        rootLayout.addView(newTextView)
+        newTextView.text = "Forward range(1-5)"
+
+        for (i in 1..5) {
+            //let's call some old java style code
+            //and add a custom view at run time
+            val newTextView = TextView(this)
+            newTextView.gravity = Gravity.CENTER
+            rootLayout.addView(newTextView)
+            newTextView.text = "$i"
+        }
+
+        //iterate backward
+        //iterating over ranges, cool?
+        val newTextView1 = TextView(this)
+        rootLayout.addView(newTextView1)
+        newTextView1.text = "Backward range(10-0) with step 2"
+
+        for (i in 10 downTo 0 step 2) {
+            //iterating over ranges, cool?
+            val newTextView = TextView(this)
+            newTextView.gravity = Gravity.CENTER
+            rootLayout.addView(newTextView)
+            newTextView.text = "$i"
+        }
     }
 
     private fun tryWhen() {
