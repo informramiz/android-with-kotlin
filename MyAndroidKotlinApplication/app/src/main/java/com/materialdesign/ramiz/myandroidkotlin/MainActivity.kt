@@ -22,10 +22,8 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        val y = returnInt()
-        val z = 5
-        val ans = y!!.times(z)
-        textView.text = "Answer with null safety check is : $ans"
+        val str = "nature is beautiful"
+        textView.text = "Automatically type casted string lenght: ${returnStringLength(str)}"
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -50,5 +48,14 @@ class MainActivity: AppCompatActivity() {
 
     fun returnInt(): Int? {
         return null
+    }
+
+    fun returnStringLength(obj: Any): Int? {
+        //type check
+        if (obj !is String) return null
+
+        //now obj is automatically type casted to String type
+        //due to check above
+        return obj.length
     }
 }
