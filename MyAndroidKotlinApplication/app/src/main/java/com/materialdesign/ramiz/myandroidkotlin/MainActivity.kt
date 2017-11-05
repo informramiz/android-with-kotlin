@@ -8,6 +8,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import com.materialdesign.ramiz.myandroidkotlin.ImageDownloader.ImageDownloaderSingleton
+import com.squareup.picasso.Picasso
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -25,7 +27,10 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        tryBasics()
+        val url: String = "http://i.imgur.com/DvpvklR.png"
+        val url1: String = "http://i.imgur.com/zEuiv4n.jpg"
+        val url2: String = "http://i.imgur.com/7iNNs3T.jpg"
+        ImageDownloaderSingleton.loadImage(this, url2, imageView)
     }
 
     private fun tryBasics() {
@@ -132,7 +137,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         super.onCreateOptionsMenu(menu)
-        menuInflater.inflate(R.menu.menu_main, menu)
+//        menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
