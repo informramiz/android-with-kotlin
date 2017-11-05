@@ -26,7 +26,19 @@ class MainActivity: AppCompatActivity() {
 
         //tryKotlinLoops()
 //        tryWhen()
-        tryRanges()
+//        tryRanges()
+        tryLambdaExpressions()
+    }
+
+    private fun tryLambdaExpressions() {
+        addTextViewWithText("Testing Lambdas on Collections...", gravity = Gravity.START)
+
+        val items = listOf("orange", "banana", "apple", "strawberry", "grapes", "olive")
+        items
+                .filter { it.startsWith("o") }
+                .sortedBy { it }
+                .map { it.toUpperCase() }
+                .forEach { addTextViewWithText(it) }
     }
 
     private fun tryRanges() {
