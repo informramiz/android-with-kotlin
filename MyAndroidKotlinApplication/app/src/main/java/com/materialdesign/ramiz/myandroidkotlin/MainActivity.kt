@@ -27,9 +27,10 @@ class MainActivity: AppCompatActivity() {
         //tryKotlinLoops()
 //        tryWhen()
 //        tryRanges()
-        tryLambdaExpressions()
+//        tryLambdaExpressions()
 //        tryPojo()
-        tryExtensions()
+//        tryExtensions()
+        tryNullSafety()
     }
 
     private fun tryLambdaExpressions() {
@@ -166,5 +167,11 @@ class MainActivity: AppCompatActivity() {
         val str = "This is my string".myUpperCase()
         addTextViewWithText("Testing extensions...", gravity = Gravity.START)
         addTextViewWithText("My custom uppper case extensions: $str")
+    }
+
+    private fun tryNullSafety() {
+        val str: String? = "This can be null"
+
+        textView.text = str?.let{"String is not null"} ?: "String is null" 
     }
 }
