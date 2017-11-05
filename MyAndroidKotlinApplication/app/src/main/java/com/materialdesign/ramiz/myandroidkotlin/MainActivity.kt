@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.TextView
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,16 +25,20 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        //tryKotlinLoops()
-//        tryWhen()
-//        tryRanges()
-//        tryLambdaExpressions()
-//        tryPojo()
-//        tryExtensions()
-//        tryNullSafety()
-//        trySingleton()
+        tryBasics()
+    }
 
-        tryCustomObjects()
+    private fun tryBasics() {
+        textView.visibility = View.VISIBLE
+        //        tryKotlinLoops()
+        //        tryWhen()
+        //        tryRanges()
+        //        tryLambdaExpressions()
+        //        tryPojo()
+        //        tryExtensions()
+        //        tryNullSafety()
+        //        trySingleton()
+        //        tryCustomObjects()
     }
 
     private fun tryCustomObjects() {
