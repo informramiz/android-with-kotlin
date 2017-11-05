@@ -30,7 +30,8 @@ class MainActivity: AppCompatActivity() {
 //        tryLambdaExpressions()
 //        tryPojo()
 //        tryExtensions()
-        tryNullSafety()
+//        tryNullSafety()
+        trySingleton()
     }
 
     private fun tryLambdaExpressions() {
@@ -172,6 +173,15 @@ class MainActivity: AppCompatActivity() {
     private fun tryNullSafety() {
         val str: String? = "This can be null"
 
-        textView.text = str?.let{"String is not null"} ?: "String is null" 
+        textView.text = str?.let{"String is not null"} ?: "String is null"
+    }
+
+    //Singleton
+    object SomeSingleton {
+        val name = "Ramiz"
+    }
+
+    private fun trySingleton() {
+        textView.text = "Access singleton name: ${SomeSingleton.name}"
     }
 }
