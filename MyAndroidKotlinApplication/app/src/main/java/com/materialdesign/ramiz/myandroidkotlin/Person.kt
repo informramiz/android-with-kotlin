@@ -7,11 +7,14 @@ import android.util.Log
  */
 
 open class Person(open val name: String, open val age: Int) {
-    val customerKey = name.toUpperCase()
 
     //secondary constructor
     constructor(person: Person) : this(person.name, person.age) {
 
+    }
+
+    open fun describe(): String {
+        return "Person name is $name, age is $age"
     }
 
     init {

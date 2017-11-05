@@ -39,6 +39,9 @@ class MainActivity : AppCompatActivity() {
     private fun tryCustomObjects() {
         val person = Person("Ramiz", 26)
         textView.text = "Person name ${person.name}, age ${person.age}"
+
+        val customer: Person = Customer("id-26", person)
+        addTextViewWithText(customer.describe())
     }
 
     private fun tryLambdaExpressions() {
