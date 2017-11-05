@@ -23,14 +23,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
-        }
-        
         initRecyclerView()
     }
 
     private fun initRecyclerView() {
+        textView.visibility = View.GONE
+        recyclerView.visibility = View.VISIBLE
+
         val imageUrls = listOf(
                 "http://i.imgur.com/DvpvklR.png",
                 "http://i.imgur.com/zEuiv4n.jpg",
@@ -53,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun tryBasics() {
         textView.visibility = View.VISIBLE
+        recyclerView.visibility = View.GONE
         //        tryKotlinLoops()
         //        tryWhen()
         //        tryRanges()
