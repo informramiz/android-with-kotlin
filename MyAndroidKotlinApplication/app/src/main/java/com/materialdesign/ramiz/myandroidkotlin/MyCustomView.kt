@@ -20,4 +20,21 @@ open class MyCustomView : View {
             super@MyCustomView.toString()
         }
     }
+
+    fun addListener() {
+        //first register listener with object declaration
+        this.setOnClickListener(object : OnClickListener{
+            override fun onClick(v: View?) {
+                android.widget.Toast.makeText(context, "MyCustomView clicked", android.widget.Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+        //hmm, not so cute, because OnClickListener interface
+        // has only one method so let's try our clean lambda friend
+        this.setOnClickListener(
+                { android.widget.Toast.makeText(context, "MyCustomView clicked", android.widget.Toast.LENGTH_SHORT).show() }
+        )
+        //looks concise? Yeah, it does
+    }
 }
