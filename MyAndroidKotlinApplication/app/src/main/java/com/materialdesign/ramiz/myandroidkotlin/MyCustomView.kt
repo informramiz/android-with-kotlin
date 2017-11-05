@@ -11,4 +11,13 @@ import android.view.View
 open class MyCustomView : View {
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
+
+    //let's define some inner class
+    inner class MyInnerClass {
+        //but how do we access super class from inner class?
+        //easy pizy, just try super@super-class-name
+        fun doSome() {
+            super@MyCustomView.toString()
+        }
+    }
 }
