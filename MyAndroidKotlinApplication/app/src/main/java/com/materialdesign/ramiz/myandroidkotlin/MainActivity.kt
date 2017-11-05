@@ -3,14 +3,14 @@ package com.materialdesign.ramiz.myandroidkotlin
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
-import com.materialdesign.ramiz.myandroidkotlin.ImageDownloader.ImageDownloaderSingleton
-import com.squareup.picasso.Picasso
-
+import com.materialdesign.ramiz.myandroidkotlin.common.Customer
+import com.materialdesign.ramiz.myandroidkotlin.common.Person
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -26,11 +26,29 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
+        
+        initRecyclerView()
+    }
 
-        val url: String = "http://i.imgur.com/DvpvklR.png"
-        val url1: String = "http://i.imgur.com/zEuiv4n.jpg"
-        val url2: String = "http://i.imgur.com/7iNNs3T.jpg"
-        ImageDownloaderSingleton.loadImage(this, url2, imageView)
+    private fun initRecyclerView() {
+        val imageUrls = listOf(
+                "http://i.imgur.com/DvpvklR.png",
+                "http://i.imgur.com/zEuiv4n.jpg",
+                "http://i.imgur.com/7iNNs3T.jpg",
+                "https://i.imgur.com/GCJRhiA.png",
+                "https://i.imgur.com/2OtvvcI.jpg",
+                "https://i.imgur.com/PvWn3r.jpg",
+                "http://i.imgur.com/AeCC64n.jpg",
+                "http://i.imgur.com/lzLQWwd.jpg",
+                "https://i.imgur.com/jZZRFTl.jpg",
+                "https://i.imgur.com/8nHkC.jpg",
+                "https://www.nasa.gov/sites/default/files/halloween_sun_2014_2k.jpg"
+        )
+
+
+        val layoutManager: LinearLayoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = FeedRecyclerViewAdapter(this, imageUrls)
     }
 
     private fun tryBasics() {
