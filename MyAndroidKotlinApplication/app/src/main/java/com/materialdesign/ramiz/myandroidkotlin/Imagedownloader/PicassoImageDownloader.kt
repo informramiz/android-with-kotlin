@@ -1,7 +1,6 @@
-package com.materialdesign.ramiz.myandroidkotlin.ImageDownloader
+package com.materialdesign.ramiz.myandroidkotlin.Imagedownloader
 
 import android.content.Context
-import android.net.Uri
 import android.widget.ImageView
 import com.squareup.picasso.Picasso
 

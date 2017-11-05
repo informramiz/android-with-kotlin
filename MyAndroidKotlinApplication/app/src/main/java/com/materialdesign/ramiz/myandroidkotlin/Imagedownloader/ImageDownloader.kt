@@ -1,4 +1,4 @@
-package com.materialdesign.ramiz.myandroidkotlin.ImageDownloader
+package com.materialdesign.ramiz.myandroidkotlin.Imagedownloader
 
 import android.content.Context
 import android.widget.ImageView

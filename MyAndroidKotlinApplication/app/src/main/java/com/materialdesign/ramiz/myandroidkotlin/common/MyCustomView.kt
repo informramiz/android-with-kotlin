@@ -1,4 +1,4 @@
-package com.materialdesign.ramiz.myandroidkotlin
+package com.materialdesign.ramiz.myandroidkotlin.common
 
 import android.content.Context
 import android.util.AttributeSet

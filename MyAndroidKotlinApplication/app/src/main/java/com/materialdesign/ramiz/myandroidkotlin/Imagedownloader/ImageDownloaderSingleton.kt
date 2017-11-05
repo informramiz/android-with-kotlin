@@ -1,8 +1,7 @@
-package com.materialdesign.ramiz.myandroidkotlin.ImageDownloader
+package com.materialdesign.ramiz.myandroidkotlin.Imagedownloader
 
 import android.content.Context
 import android.widget.ImageView
-import com.squareup.picasso.Picasso
 
 /**
  * Created by ramiz on 11/6/17.

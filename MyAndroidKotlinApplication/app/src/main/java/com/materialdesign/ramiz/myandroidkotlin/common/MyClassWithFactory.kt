@@ -1,4 +1,4 @@
-package com.materialdesign.ramiz.myandroidkotlin
+package com.materialdesign.ramiz.myandroidkotlin.common
 
 /**
  * Created by ramiz on 11/5/17.
@@ -12,6 +12,6 @@ open class MyClassWithFactory {
 
     fun justForPractice() {
         //call factory method from here
-        MyClassWithFactory.create()
+        create()
     }
 }
