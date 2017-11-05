@@ -28,6 +28,7 @@ class MainActivity: AppCompatActivity() {
 //        tryWhen()
 //        tryRanges()
         tryLambdaExpressions()
+        tryPojo()
     }
 
     private fun tryLambdaExpressions() {
@@ -142,5 +143,13 @@ class MainActivity: AppCompatActivity() {
         //now obj is automatically type casted to String type
         //due to check above
         return obj.length
+    }
+
+    //create a POJO, it's that easy really?
+    data class User(val name: String, val email: String)
+
+    private fun tryPojo() {
+        val user = User("Ramiz Raja", "informramiz@gmail.com")
+        addTextViewWithText("POJO User info: ${user.name} has email ID ${user.email}", gravity = Gravity.START)
     }
 }
