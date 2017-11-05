@@ -22,7 +22,7 @@ open class MyCustomView : View {
     }
 
     fun addListener() {
-        //first register listener with object declaration
+        //first register listener with object expression
         this.setOnClickListener(object : OnClickListener{
             override fun onClick(v: View?) {
                 android.widget.Toast.makeText(context, "MyCustomView clicked", android.widget.Toast.LENGTH_SHORT).show()
