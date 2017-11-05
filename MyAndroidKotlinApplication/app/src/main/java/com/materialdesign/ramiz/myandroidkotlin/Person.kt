@@ -6,7 +6,7 @@ import android.util.Log
  * Created by ramiz on 11/5/17.
  */
 
-class Person(val name: String, val age: Int) {
+open class Person(open val name: String, open val age: Int) {
     val customerKey = name.toUpperCase()
 
     //secondary constructor
