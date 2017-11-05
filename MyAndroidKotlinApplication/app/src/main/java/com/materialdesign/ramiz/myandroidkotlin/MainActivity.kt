@@ -24,7 +24,7 @@ class MainActivity: AppCompatActivity() {
 
         val y = returnInt()
         val z = 5
-        val ans = y?.times(z)
+        val ans = y!!.times(z)
         textView.text = "Answer with null safety check is : $ans"
     }
 
@@ -49,6 +49,6 @@ class MainActivity: AppCompatActivity() {
     fun maxOf(x: Int, y: Int) = if (x > y) x else y
 
     fun returnInt(): Int? {
-        return 1
+        return null
     }
 }
