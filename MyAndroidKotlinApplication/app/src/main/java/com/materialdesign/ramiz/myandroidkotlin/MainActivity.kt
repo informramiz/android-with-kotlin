@@ -24,7 +24,32 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        tryKotlinLoops()
+        //tryKotlinLoops()
+//        tryWhen()
+        tryRanges()
+    }
+
+    private fun tryRanges() {
+        val x = 5
+        val y = 9
+
+        if (x in 1..y) {
+            textView.text = "$x fits in range 0-$y"
+        }
+    }
+
+    private fun tryWhen() {
+        textView.text = "Description of string : ${describe(1)}"
+    }
+
+    private fun describe(obj: Any): String {
+        return when (obj) {
+            1 -> "one"
+            "Ramiz" -> " Raja"
+            is Long -> "is Long"
+            !is String -> "not String"
+            else -> "I don't know"
+        }
     }
 
     private fun tryKotlinLoops() {
