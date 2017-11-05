@@ -3,8 +3,10 @@ package com.materialdesign.ramiz.myandroidkotlin
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -22,8 +24,28 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(view, "Fab clicked", Snackbar.LENGTH_SHORT);
         }
 
-        val str = "nature is beautiful"
-        textView.text = "Automatically type casted string lenght: ${returnStringLength(str)}"
+        tryKotlinLoops()
+    }
+
+    private fun tryKotlinLoops() {
+        val items = listOf("I ", "am ", "Ramiz ", "Raja")
+        //let's try kotlin loops
+        var str: String = ""
+        for (item in items) {
+            str += item
+        }
+        textView.text = "String concatenated in loop is: $str"
+
+        //if we need index? Still easy
+        for (index in items.indices) {
+            //let's call some old java style code
+            //and add a custom view at run time
+            val newTextView = TextView(this)
+            newTextView.gravity = Gravity.CENTER
+            rootLayout.addView(newTextView)
+
+            newTextView.text = "Item at $index is ${items[index]}"
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
