@@ -12,7 +12,7 @@ import com.materialdesign.ramiz.myandroidkotlin.Imagedownloader.ImageDownloaderS
  * Created by ramiz on 11/6/17.
  */
 class FeedRecyclerViewAdapter(val context: Context, val imageUrls: List<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    var mOnClickListener: FeedOnClickListener? = null
+    private var mOnClickListener: FeedOnClickListener? = null
 
     override fun getItemCount(): Int {
         return imageUrls.size
@@ -20,7 +20,14 @@ class FeedRecyclerViewAdapter(val context: Context, val imageUrls: List<String>)
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent!!.context).inflate(R.layout.list_item_feed, parent, false)
-        return FeedViewHolder(view)
+        val feedViewHolder = FeedViewHolder(view)
+        feedViewHolder.imageView.setOnClickListener ({
+            if (feedViewHolder.adapterPosition != RecyclerView.NO_POSITION) {
+                mOnClickListener?.onClick(feedViewHolder.adapterPosition)
+            }
+        })
+
+        return feedViewHolder
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
@@ -37,7 +44,7 @@ class FeedRecyclerViewAdapter(val context: Context, val imageUrls: List<String>)
         val imageView: ImageView = itemView!!.findViewById(R.id.feedCardImageView)
     }
 
-    interface FeedOnClickListener {
+    public interface FeedOnClickListener {
         fun onClick(position: Int)
     }
 }
