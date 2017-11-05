@@ -149,7 +149,10 @@ class MainActivity: AppCompatActivity() {
     data class User(val name: String, val email: String)
 
     private fun tryPojo() {
-        val user = User("Ramiz Raja", "informramiz@gmail.com")
-        addTextViewWithText("POJO User info: ${user.name} has email ID ${user.email}", gravity = Gravity.START)
+        val user1 = User("Ramiz Raja", "informramiz@gmail.com")
+        addTextViewWithText("POJO User info: ${user1.name} has email ID ${user1.email}", gravity = Gravity.START)
+
+        val user2 = User ("Ramiz Raja", "informramiz@gmail.com")
+        addTextViewWithText("user1 == user2 ? ${user1 == user2}")
     }
 }
