@@ -31,7 +31,14 @@ class MainActivity : AppCompatActivity() {
 //        tryPojo()
 //        tryExtensions()
 //        tryNullSafety()
-        trySingleton()
+//        trySingleton()
+
+        tryCustomObjects()
+    }
+
+    private fun tryCustomObjects() {
+        val person = Person("Ramiz", 26)
+        textView.text = "Person name ${person.name}, age ${person.age}"
     }
 
     private fun tryLambdaExpressions() {
