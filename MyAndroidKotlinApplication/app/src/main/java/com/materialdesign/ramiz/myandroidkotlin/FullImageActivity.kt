@@ -3,16 +3,11 @@ package com.materialdesign.ramiz.myandroidkotlin
 import android.annotation.TargetApi
 import android.os.Build
 import android.os.Bundle
-import android.support.v4.view.GestureDetectorCompat
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
-import android.view.Window
 import com.materialdesign.ramiz.myandroidkotlin.Imagedownloader.ImageDownloaderSingleton
-
-import kotlinx.android.synthetic.main.activity_full_image.*
 import kotlinx.android.synthetic.main.content_full_image.*
 
 class FullImageActivity : AppCompatActivity(){
