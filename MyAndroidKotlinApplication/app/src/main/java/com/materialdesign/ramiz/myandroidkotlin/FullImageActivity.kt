@@ -18,8 +18,6 @@ class FullImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_full_image)
-        setSupportActionBar(toolbar)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val imageUrl = intent.getStringExtra(EXTRA_URL)

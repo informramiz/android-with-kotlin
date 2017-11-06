@@ -25,7 +25,7 @@
             android:name=".FullImageActivity"
             android:label="@string/title_activity_full_image"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/FullImageActivityTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.materialdesign.ramiz.myandroidkotlin.MainActivity"/>
