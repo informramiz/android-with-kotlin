@@ -5,7 +5,7 @@ import android.widget.ImageView
 
 /**
  * Created by ramiz on 11/6/17.
- * Defining it as inteface to add a layer betwee
+ * Defining it as inteface to add a layer between
  * actual image downloading library and my code
  * so that code can be easily switched between different
  * image downloaders.
